@@ -28,11 +28,20 @@ namespace Ecom.infrastructure.Repositries.Service
             foreach (var item in files)
             {
                 if (item.Length > 0)
+
+
                 {
-                    // توليد اسم فريد للصورة
+                   
                     var imageName = $"{Guid.NewGuid()}{Path.GetExtension(item.FileName)}";
                     var imageSrc = $"/Images/{src}/{imageName}";
                     var root = Path.Combine(imageDirectory, imageName);
+
+
+
+
+
+
+
 
                     try
                     {
@@ -44,7 +53,7 @@ namespace Ecom.infrastructure.Repositries.Service
                     }
                     catch (Exception ex)
                     {
-                        // معالجة الخطأ (يمكنك تسجيله أو إعادته)
+                       
                         Console.WriteLine($"Error saving image: {ex.Message}");
                     }
                 }
