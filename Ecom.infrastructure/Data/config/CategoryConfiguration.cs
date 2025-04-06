@@ -23,7 +23,7 @@ namespace Ecom.infrastructure.Data.config
             builder.HasData(
                 new Category
                 {
-                    Id=1,
+                 Id=1,
                     Name = "test",
                     Description = "test"
                 }

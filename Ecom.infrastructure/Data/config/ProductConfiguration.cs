@@ -33,12 +33,14 @@ namespace Ecom.infrastructure.Data.config
         Name = "test",
         categroyid=1,
        
-        Id=1,
+      Id=1,
         Newprice=1000,
         Description = "test"
     }
     );
 
         }
+        
     }
+    
 }

@@ -66,8 +66,8 @@ namespace Ecom.Apl.Controllers
                 return NotFound(new { message = "Product not found" });
             }
 
-            var obj = Mapper.Map<Product>(ProductDto);
-            await iunitofWork.productRepositry.Addasync(obj);
+         
+            await iunitofWork.productRepositry.Addasync(ProductDto);
 
 
 

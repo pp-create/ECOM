@@ -1,4 +1,4 @@
-using Ecom.Apl.Middelware;
+﻿using Ecom.Apl.Middelware;
 using Ecom.infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 // In your Program.cs or Startup.cs
@@ -7,12 +7,13 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: "CORSPolicy", policyBuilder =>
     {
         policyBuilder
-            .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials()
-            .WithOrigins();
+            .AllowAnyHeader()        // يسمح بأي هيدر
+            .AllowAnyMethod()        // يسمح بأي ميثود (GET, POST, PUT, DELETE, إلخ)
+            //.AllowCredentials()      // يسمح باستخدام الكوكيز أو البيانات المرسلة مع الطلب
+            .AllowAnyOrigin();       // يسمح بأي موقع بالوصول
     });
 });
+
 builder.Services.AddMemoryCache();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
